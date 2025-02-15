@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf");
+}
+
+body {
+    background-color: #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.container {
+    /* align-items: center; */
+    margin: 80px auto;
+    /* width: 500px; */
+}
+
+input {
+    box-sizing: border-box;
+    width: 500px;
+    height: 61px;
+    font-size: 48px;
+    border: none;
+}
+
+.item {
+    width: 500px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(227, 227, 227);
+    font-size: 30px;
+    padding: 0 13px;
+}
+
+.item:hover {
+    background: rgb(101, 205, 249);
+}
+
+.output {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: rgb(226, 123, 235);
+}
+
+.output-items {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 24px;
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    cursor: pointer;
+    white-space: nowrap;        /* Запрет на перенос строки */
+    overflow: hidden;           /* Скрыть лишний текст */
+    text-overflow: ellipsis;
+}
+
+.img {
+    cursor: pointer;
+    background-image: url(/close.png);
+    width: 45px;
+    height: 42px;
+    background-size: cover;
+}
+
+
+.loader {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 5px solid #7c7878;
+    border-bottom-color: rgb(226, 123, 235);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
